@@ -22,7 +22,7 @@ const skills = [
   { skill: "GitHub" },
 ];
 
-const About = () => {
+const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
   const currentTheme = theme === "system" ? "light" : theme;
   return (

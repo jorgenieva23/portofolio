@@ -4,7 +4,7 @@ import { HiArrowDown } from "react-icons/hi";
 import pdf from "../../assets/Nieva Jorge CV.pdf";
 import { useTheme } from "next-themes";
 
-const DownloadCV = () => {
+const DownloadCV: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
   const currentTheme = theme === "system" ? "light" : theme;
   const getDownloadLink = () => {
