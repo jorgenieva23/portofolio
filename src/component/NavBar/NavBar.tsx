@@ -44,7 +44,7 @@ export const NavBar: React.FC = (): JSX.Element => {
             <Link to="home">
               <div className="container flex items-center space-x-2">
                 <h2
-                  className={`text-2xl font-bold ${
+                  className={`text-2xl font-bold cursor-pointer ${
                     currentTheme === "dark" ? "text-white" : "text-black"
                   }`}
                 >
