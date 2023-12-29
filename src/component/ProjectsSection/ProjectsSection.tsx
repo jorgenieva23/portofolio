@@ -9,15 +9,15 @@ const projects = [
   {
     name: "Arbi'Track",
     description:
-      " Participación integral en el desarrollo de la plataforma ArbiTrack, dedicada a brindar servicio a los arbitradores de criptomonedas, responsable de la implementación de la lógica de la aplicación, la coherencia visual y la usabilidad, la gestión de bases de datos y funcionalidades contables.",
+      "Participación integral en el desarrollo de la plataforma ArbiTrack, dedicada a brindar servicio a los arbitradores de criptomonedas, responsable de la implementación de la lógica de la aplicación, la coherencia visual, la usabilidad, la gestión de bases de datos y funcionalidades contables.",
     image: project2,
     github: "https://github.com/geromedina/arbitrack",
-    link: "www.arbitrack.com.ar",
+    link: "https://www.arbitrack.com.ar/",
   },
   {
     name: "FromZeroToDev",
     description:
-      "FromZeroToDev es una plataforma de cursos asincrónicos creada en un grupo de 6 personas utilizando metodologías ágiles SCRUM. Cuenta con autenticación de usuario con Auth0, pasarela de pagos Usamos TypeScript, Redux Toolkit, Tailwind, MongoDB y Mongoose.",
+      "FromZeroToDev es una plataforma de comercio electrónico enfocada en cursos educativos de programación. Cuenta con funciones clave como autenticación, búsqueda, filtrados, clasificación, gestión de usuario, reseñas, envío de correo electrónico y pasarela de pago; Tecnologias usadas: TypeScript, Redux Toolkit, Tailwind, Node.js, MongoDB y Mongoose.",
     image: project1,
     github: "https://github.com/geromedina/FromZeroToDev",
     link: "https://from-zero-to-dev-posta.vercel.app/",
