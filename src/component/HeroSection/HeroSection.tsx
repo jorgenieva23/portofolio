@@ -8,16 +8,18 @@ export const HeroSection: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
   const currentTheme = theme === "system" ? "light" : theme;
 
+  const borderColor = currentTheme === "light" ? "rgb(59 130 246)" : "#ed8936";
+
   return (
-    <section id="home">
+    <section id="home" style={{ ["--border-color" as any]: borderColor }}>
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-7 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2 md:w-1/2">
+        <div className=" animacion rounded-full md:mt-2">
           <img
             src={image}
             alt=""
             width={325}
             height={325}
-            className="rounded-full shadow-2xl"
+            className="rounded-full relative m-1 shadow-2xl"
           />
         </div>
         <div className="md:mt-2 md:w-3/5">

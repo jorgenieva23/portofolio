@@ -15,8 +15,8 @@ export const Home: React.FC = (): JSX.Element => {
       <NavBar />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl">
         <HeroSection />
-        <About />
         <ProjectsSection />
+        <About />
       </div>
       <Footer />
     </div>
