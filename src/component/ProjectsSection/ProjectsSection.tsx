@@ -2,10 +2,19 @@ import React from "react";
 import SlideUp from "../SlideUp/SlideUp";
 import project1 from "../../assets/project1.png";
 import project2 from "../../assets/project2.png";
+import project3 from "../../assets/project3.png";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { useTheme } from "next-themes";
 
 const projects = [
+  {
+    name: "JerjeGym",
+    description:
+      "JerjeGym es sistema de control de Gimnasio, el mismo cuenta con autenticacion de usuarios mediante email y password junto a roles y permisos. ABM de socios, promociones, cuotas, ingresos. Dashboard con estadísticas vitales para el control de sus respectivas funciones. Balance de ingresos diarios mediante graficos. Control de movimientos realizados por los usuarios.",
+    image: project3,
+    github: "https://github.com/jorgenieva23/Sist.Gym",
+    link: "https://www.jerje.com.ar/",
+  },
   {
     name: "Arbi'Track",
     description:
