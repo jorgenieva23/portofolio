@@ -9,6 +9,7 @@ const skills = [
   { skill: "Vue3.js" },
   { skill: "TypeScript" },
   { skill: "Node.js" },
+  { skill: "Nest.js" },
   { skill: "Express" },
   { skill: "React" },
   { skill: "Redux" },
@@ -20,6 +21,8 @@ const skills = [
   { skill: "Next.js" },
   { skill: "Vite" },
   { skill: "Tailwind CSS" },
+  { skill: "Bootstrap" },
+  { skill: "Sass" },
   { skill: "Git" },
   { skill: "GitHub" },
 ];
