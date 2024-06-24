@@ -6,14 +6,12 @@ const skills = [
   { skill: "HTML" },
   { skill: "CSS" },
   { skill: "JavaScript" },
-  { skill: "Vue3.js" },
   { skill: "TypeScript" },
   { skill: "Node.js" },
-  { skill: "Nest.js" },
   { skill: "Express" },
   { skill: "React" },
   { skill: "Redux" },
-  { skill: "My SQL" },
+  { skill: "SQL" },
   { skill: "PostgreSQL" },
   { skill: "Sequelize" },
   { skill: "MongoDB" },
@@ -43,39 +41,102 @@ const About: React.FC = (): JSX.Element => {
         </h1>
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2 ">
+          <div className="md:w-1/2">
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
               ¡Conóceme!
             </h1>
+            <p>Hola! 👋🏻</p>
             <p>
-              Hola, mi nombre es Jorge y soy un Desarrollador Full Stack{" "}
-              <span className="font-bold">{"ambicioso"}</span>,
-              <span className="font-bold">{" auto motivado"}</span>, y{" "}
-              <span className="font-bold">{"comprometido"}</span>, de Tucuman,
-              Argentina.
-            </p>
-            <br />
-            <p>
-              Conclui un bootcamp de 6 meses de programacion Fullstack y hasta
-              el día de hoy sigo actualizando mis habilidades y manteniendome al
-              corriente de las nuevas actualizaciones tecnologicas
-            </p>
-            <br />
-            <p>
-              Estoy en busqueda de una oportunidad desafiante, donde pueda{" "}
+              ¿Tienes problemas de desarrollo web que necesitan una{" "}
               <span
                 className={`font-bold ${
                   currentTheme === "dark"
-                    ? "bg-gradient-to-r bg-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r bg-blue-500 bg-clip-text text-transparent"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
               >
-                aplicar mis conocimientos y continuar aprendiendo
-              </span>{" "}
-              Estoy seguro de que mi experiencia y habilidades serían una
-              valiosa contribución
+                solución rápida y eficiente
+              </span>
+              ? ¡Contáctame!
             </p>
             <br />
+            <p>
+              Soy{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                Jorge Nieva
+              </span>
+              , tu{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                desarrollador web FullStack
+              </span>{" "}
+              con 2 años de experiencia en tecnología. 💻
+            </p>
+            <br />
+            <p>
+              ¿Necesitas que tu sitio web funcione a la perfección? ¿Quieres que
+              tu proyecto sea un{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                éxito
+              </span>
+              ? ¡Estoy aquí para hacerlo realidad!
+            </p>
+            <br />
+            <p>
+              Mi objetivo es{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                ayudarte a alcanzar tus metas y ambiciones
+              </span>
+              . Con mis conocimientos y habilidades,{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                garantizo que tus ideas se transformen en soluciones efectivas y
+                personalizadas
+              </span>
+              .
+            </p>
+            <br />
+            <p>
+              No pierdas más tiempo buscando. Si necesitas un desarrollador que{" "}
+              <span
+                className={`font-bold ${
+                  currentTheme === "dark"
+                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
+                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                }`}
+              >
+                se comprometa contigo y con tus proyectos
+              </span>
+              , ¡contáctame!
+            </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">Mis habilidades Tech</h1>

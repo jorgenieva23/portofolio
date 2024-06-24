@@ -44,7 +44,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             >
               Desarrollador Full Stack{" "}
             </span>
-            con orientación hacia el backend, desde Tucuman, Argentina
+            con orientación hacia el frontend, desde Tucuman, Argentina
           </p>
           <Link
             to="projects"
