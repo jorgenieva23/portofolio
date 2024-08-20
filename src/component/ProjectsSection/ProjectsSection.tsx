@@ -3,7 +3,6 @@ import SlideUp from "../SlideUp/SlideUp";
 import project1 from "../../assets/project1.png";
 import project2 from "../../assets/project2.png";
 import project3 from "../../assets/project3.png";
-import project4 from "../../assets/project4.png";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { useTheme } from "next-themes";
 
@@ -31,14 +30,6 @@ const projects = [
     image: project1,
     github: "https://github.com/geromedina/FromZeroToDev",
     link: "https://from-zero-to-dev-posta.vercel.app/",
-  },
-  {
-    name: "JournalApp",
-    description:
-      "Una aplicación frontend creada con React para gestionar notas en un diario digital. Incluye autenticación segura con Firebase, permitiendo a los usuarios registrarse e iniciar sesión fácilmente.",
-    image: project4,
-    github: "https://github.com/jorgenieva23/JournalApp",
-    link: "https://journal-app-nine-chi.vercel.app/",
   },
   //   {
   //     name: "PlatoIO",
