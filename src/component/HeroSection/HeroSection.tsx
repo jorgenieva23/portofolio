@@ -59,7 +59,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             offset={-100}
             duration={500}
           >
-            Mis projectos
+            Mis proyectos
           </Link>
         </div>
       </div>
