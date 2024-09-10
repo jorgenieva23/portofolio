@@ -13,7 +13,7 @@ const projects = [
   {
     name: "JerjeGym",
     description:
-      "JerjeGym es un sistema para la gestion y control de Gimnasios. El mismo cuenta con autenticacion de usuarios mediante email y password junto a roles y permisos. ABM de socios, promociones, cuotas, ingresos. Dashboard con estadísticas vitales para el control de sus respectivas funciones. Balance de ingresos diarios mediante graficos. Control de movimientos realizados por los usuarios.",
+      "JerjeGym es un sistema para la gestión y control de Gimnasios. El mismo cuenta con autenticación de usuarios mediante email y password junto a roles y permisos. ABM de socios, promociones, cuotas, ingresos. Dashboard con estadísticas vitales para el control de sus respectivas funciones. Balance de ingresos diarios mediante gráficos. Control de movimientos realizados por los usuarios.",
     image: project3,
     github: "https://github.com/jorgenieva23/Sist.Gym",
     link: "https://www.jerje.com.ar/",
@@ -29,7 +29,7 @@ const projects = [
   {
     name: "FromZeroToDev",
     description:
-      "FromZeroToDev es una plataforma de comercio electrónico enfocada en cursos educativos de programación. Cuenta con funciones clave como autenticación, búsqueda, filtrados, clasificación, gestión de usuario, reseñas, envío de correo electrónico y pasarela de pago; Tecnologias usadas: TypeScript, Redux Toolkit, Tailwind, Node.js, MongoDB y Mongoose.",
+      "FromZeroToDev es una plataforma de comercio electrónico enfocada en cursos educativos de programación. Cuenta con funciones clave como autenticación, búsqueda, filtrados, clasificación, gestión de usuario, reseñas, envío de correo electrónico y pasarela de pago; Tecnologías usadas: TypeScript, Redux Toolkit, Tailwind, Node.js, MongoDB y Mongoose.",
     image: project1,
     github: "https://github.com/geromedina/FromZeroToDev",
     link: "https://from-zero-to-dev-posta.vercel.app/",
@@ -45,13 +45,13 @@ const projects = [
   {
     name: "Space X Clone",
     description:
-      "Space X Clone es un proyecto de clonación de la página web de Space X para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwindcss, para replicar la experiencia del sitio web de Space X y el desarrollo de interfaces interactivas.",
+      "Space X Clone es un proyecto de clonación de la página web de Space X para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwinds, para replicar la experiencia del sitio web de Space X y el desarrollo de interfaces interactivas.",
     image: project5,
   },
   {
     name: "Tesla Clone",
     description:
-      "Tesla Clone es un proyecto de clonación de la página web de Tesla para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwindcss, para replicar la experiencia del sitio web de Tesla y el desarrollo de interfaces interactivas.",
+      "Tesla Clone es un proyecto de clonación de la página web de Tesla para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwinds, para replicar la experiencia del sitio web de Tesla y el desarrollo de interfaces interactivas.",
     image: project6,
   },
   //   {
@@ -78,7 +78,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
   return (
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
-        Projectos
+        Proyectos
         <hr
           className={`w-6 mt-2 h-1 mx-auto my-4border-0 rounded ${
             currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"

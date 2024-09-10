@@ -59,7 +59,7 @@ const About: React.FC = (): JSX.Element => {
               >
                 solución rápida y eficiente
               </span>
-              ? ¡Contáctame!
+              ? ¡Contácteme!
             </p>
             <br />
             <p>
@@ -137,7 +137,7 @@ const About: React.FC = (): JSX.Element => {
               >
                 se comprometa contigo y con tus proyectos
               </span>
-              , ¡contáctame!
+              , ¡contácteme!
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
