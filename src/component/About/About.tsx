@@ -16,6 +16,8 @@ const skills = [
   { skill: "Sequelize" },
   { skill: "MongoDB" },
   { skill: "Mongoose" },
+  { skill: "Firebase" },
+  { skill: "Firestore" },
   { skill: "Next.js" },
   { skill: "Vite" },
   { skill: "Tailwind CSS" },
