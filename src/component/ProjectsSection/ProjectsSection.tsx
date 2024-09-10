@@ -3,7 +3,7 @@ import SlideUp from "../SlideUp/SlideUp";
 import project1 from "../../assets/project1.png";
 import project2 from "../../assets/project2.png";
 import project3 from "../../assets/project3.png";
-import project4 from "../../assets/project4.png"
+import project4 from "../../assets/project4.png";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { useTheme } from "next-themes";
 
