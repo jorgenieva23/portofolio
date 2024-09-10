@@ -78,7 +78,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
   return (
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
-        Projectos
+        Proyectos 
         <hr
           className={`w-6 mt-2 h-1 mx-auto my-4border-0 rounded ${
             currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"
