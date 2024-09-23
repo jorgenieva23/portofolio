@@ -47,12 +47,16 @@ const projects = [
     description:
       "Space X Clone es un proyecto de clonación de la página web de Space X para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwinds, para replicar la experiencia del sitio web de Space X y el desarrollo de interfaces interactivas.",
     image: project5,
+    github: "https://github.com/jorgenieva23/SpacexClon",
+    link: "https://spacex-clon.vercel.app/",
   },
   {
     name: "Tesla Clone",
     description:
       "Tesla Clone es un proyecto de clonación de la página web de Tesla para fortalecer habilidades en frontend. Utilize Astro como entorno principal, junto con HTML, JavaScript y Tailwinds, para replicar la experiencia del sitio web de Tesla y el desarrollo de interfaces interactivas.",
     image: project6,
+    github: "https://github.com/jorgenieva23/TeslaClon",
+    link: "https://tesla-clon-delta.vercel.app/",
   },
   //   {
   //     name: "PlatoIO",
@@ -77,10 +81,10 @@ const ProjectsSection: React.FC = (): JSX.Element => {
 
   return (
     <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
+      <h1 className="relative my-10 text-center font-bold text-4xl">
         Proyectos
         <hr
-          className={`w-6 mt-2 h-1 mx-auto my-4border-0 rounded ${
+          className={`w-6 mt-2 h-1 mx-auto my-4 border-0 rounded ${
             currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"
           }`}
         ></hr>
@@ -119,36 +123,33 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                       ></div>
 
                       <div className="relative max-h-20 overflow-hidden">
-                        <p className="opacity-0 text-white text-xl group-hover:opacity-80 group-hover:translate-y-[-75%] transition-transform duration-[7000ms] delay-[1500ms] ease-linear">
+                        <p className="opacity-0 text-white text-xl group-hover:opacity-80 group-hover:translate-y-[-75%] transition-transform duration-[8000ms] delay-[1250ms] ease-linear">
                           {project.description}
                         </p>
                       </div>
                       <div className="flex flex-row align-bottom space-x-4 pt-10 opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
-                        {project.name !== "Space X Clone" &&
-                          project.name !== "Tesla Clone" && (
-                            <>
-                              <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <BsGithub
-                                  size={30}
-                                  className="hover:-translate-y-1 transition-transform cursor-pointer"
-                                />
-                              </a>
-                              <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <BsArrowUpRightSquare
-                                  size={30}
-                                  className="hover:-translate-y-1 transition-transform cursor-pointer"
-                                />
-                              </a>
-                            </>
-                          )}
+                        <>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <BsGithub
+                              size={30}
+                              className="hover:-translate-y-1 transition-transform cursor-pointer"
+                            />
+                          </a>
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <BsArrowUpRightSquare
+                              size={30}
+                              className="hover:-translate-y-1 transition-transform cursor-pointer"
+                            />
+                          </a>
+                        </>
                       </div>
                     </div>
                   </article>
