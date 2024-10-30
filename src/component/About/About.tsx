@@ -127,7 +127,7 @@ const About: React.FC = (): JSX.Element => {
                 />
               ))}
             </div>
-            <div className="">
+            <div>
               <DownloadCV />
             </div>
           </div>
