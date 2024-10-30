@@ -1,33 +1,7 @@
 import React from "react";
 import DownloadCV from "../DownloadCV/DownloadCV";
 import { useTheme } from "next-themes";
-
-const skills = [
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "Node.js" },
-  { skill: "Express" },
-  { skill: "React" },
-  { skill: "React Native" },
-  { skill: "Redux" },
-  { skill: "SQL" },
-  { skill: "PostgreSQL" },
-  { skill: "Sequelize" },
-  { skill: "MongoDB" },
-  { skill: "Mongoose" },
-  { skill: "Firebase" },
-  { skill: "Firestore" },
-  { skill: "Next.js" },
-  { skill: "Astro" },
-  { skill: "Vite" },
-  { skill: "Tailwind CSS" },
-  { skill: "Bootstrap" },
-  { skill: "Sass" },
-  { skill: "Git" },
-  { skill: "GitHub" },
-];
+import { techImages } from "./techImages";
 
 const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
@@ -144,18 +118,16 @@ const About: React.FC = (): JSX.Element => {
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">Mis habilidades Tech</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                  >
-                    {item.skill}
-                  </p>
-                );
-              })}
+              {techImages.map((imgSrc, index) => (
+                <img
+                  key={index}
+                  src={imgSrc}
+                  alt={`Tech Icon ${index + 1}`}
+                  className="w-16 h-16 m-2"
+                />
+              ))}
             </div>
-            <div className="py-6">
+            <div className="">
               <DownloadCV />
             </div>
           </div>
