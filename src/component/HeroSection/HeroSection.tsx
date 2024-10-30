@@ -31,7 +31,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
                   : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent"
               }`}
             >
-              Hola!, soy Jorge
+              ¡Hola! Soy Jorge,
             </span>
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
@@ -44,7 +44,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             >
               Desarrollador Full Stack{" "}
             </span>
-            con orientación hacia el frontend, desde Tucuman, Argentina
+            con especialización en frontend, desde Tucuman, Argentina.
           </p>
           <Link
             to="projects"

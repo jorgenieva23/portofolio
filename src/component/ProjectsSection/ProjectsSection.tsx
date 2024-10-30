@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SlideUp from "../SlideUp/SlideUp";
 import project1 from "../../assets/project1.png";
 import project2 from "../../assets/project2.png";
@@ -7,6 +7,25 @@ import project4 from "../../assets/project4.png";
 import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiMongodb,
+  SiJsonwebtokens,
+  SiExpress,
+  SiRedux,
+  SiTailwindcss,
+  SiAstro,
+  SiCss3,
+  SiHtml5,
+  SiSass,
+  SiFirebase,
+  SiAuth0,
+  SiNextdotjs,
+  SiVite,
+} from "react-icons/si";
+import { LiaNode } from "react-icons/lia";
 import { useTheme } from "next-themes";
 
 const projects = [
@@ -17,6 +36,17 @@ const projects = [
     image: project3,
     github: "https://github.com/jorgenieva23/Sist.Gym",
     link: "https://www.jerje.com.ar/",
+    icons: [
+      SiTypescript,
+      SiReact,
+      LiaNode,
+      SiMongodb,
+      SiJsonwebtokens,
+      SiExpress,
+      SiRedux,
+      SiTailwindcss,
+      SiVite,
+    ],
   },
   {
     name: "ArbiTrack",
@@ -25,6 +55,17 @@ const projects = [
     image: project2,
     github: "https://github.com/geromedina/arbitrack",
     link: "https://www.arbitrack.com.ar/",
+    icons: [
+      SiJavascript,
+      LiaNode,
+      SiMongodb,
+      SiJsonwebtokens,
+      SiReact,
+      SiExpress,
+      SiRedux,
+      SiTailwindcss,
+      SiNextdotjs,
+    ],
   },
   {
     name: "FromZeroToDev",
@@ -33,6 +74,17 @@ const projects = [
     image: project1,
     github: "https://github.com/geromedina/FromZeroToDev",
     link: "https://from-zero-to-dev-posta.vercel.app/",
+    icons: [
+      SiTypescript,
+      LiaNode,
+      SiMongodb,
+      SiAuth0,
+      SiReact,
+      SiExpress,
+      SiRedux,
+      SiTailwindcss,
+      SiVite,
+    ],
   },
   {
     name: "JournalApp",
@@ -41,6 +93,7 @@ const projects = [
     image: project4,
     github: "https://github.com/jorgenieva23/JournalApp",
     link: "https://journal-app-nine-chi.vercel.app/",
+    icons: [SiJavascript, SiFirebase, SiReact, SiRedux, SiSass, SiVite],
   },
   {
     name: "Space X Clone",
@@ -49,6 +102,7 @@ const projects = [
     image: project5,
     github: "https://github.com/jorgenieva23/SpacexClon",
     link: "https://spacex-clon.vercel.app/",
+    icons: [SiJavascript, SiHtml5, SiCss3, SiAstro],
   },
   {
     name: "Tesla Clone",
@@ -57,6 +111,7 @@ const projects = [
     image: project6,
     github: "https://github.com/jorgenieva23/TeslaClon",
     link: "https://tesla-clon-delta.vercel.app/",
+    icons: [SiJavascript, SiHtml5, SiCss3, SiAstro],
   },
   //   {
   //     name: "PlatoIO",
@@ -79,10 +134,20 @@ const ProjectsSection: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
   const currentTheme = theme === "system" ? "light" : theme;
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
-        Proyectos 
+        Proyectos
         <hr
           className={`w-6 mt-2 h-1 mx-auto my-4 border-0 rounded ${
             currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"
@@ -108,7 +173,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                           : "center",
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent  to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300"></div>
 
                     <div className="relative bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300">
                       <h1 className="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
@@ -122,13 +187,33 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                         }rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300`}
                       ></div>
 
-                      <div className="relative max-h-20 overflow-hidden">
-                        <p className="opacity-0 text-white text-xl group-hover:opacity-80 group-hover:translate-y-[-75%] transition-transform duration-[8000ms] delay-[1250ms] ease-linear">
+                      <div
+                        className="relative max-h-20 overflow-hidden"
+                        onMouseEnter={() => handleMouseEnter(idx)}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <p
+                          className={`opacity-0 text-white text-xl group-hover:opacity-80 group-hover:translate-y-[-75%] transition-transform duration-[8000ms] delay-[1250ms] ease-linear ${
+                            hoveredIndex === idx
+                              ? "opacity-80 translate-y-[-75%]"
+                              : "opacity-0 translate-y-0"
+                          }`}
+                        >
                           {project.description}
                         </p>
                       </div>
-                      <div className="flex flex-row align-bottom space-x-4 pt-10 opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
-                        <>
+
+                      <div className="flex flex-col align-bottom pt-3 opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
+                        <div className="flex flex-row space-x-4">
+                          {project.icons.map((IconComponent, i) => (
+                            <IconComponent
+                              key={i}
+                              size={30}
+                              className="text-white"
+                            />
+                          ))}
+                        </div>
+                        <div className="flex pt-2 space-x-4">
                           <a
                             href={project.github}
                             target="_blank"
@@ -149,7 +234,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                               className="hover:-translate-y-1 transition-transform cursor-pointer"
                             />
                           </a>
-                        </>
+                        </div>
                       </div>
                     </div>
                   </article>
