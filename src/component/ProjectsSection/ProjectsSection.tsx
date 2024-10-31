@@ -36,7 +36,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 w-full">
                   <article
-                    className="relative mx-auto w-full max-w-lg shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 group"
+                    className="relative mx-auto w-full max-w-lg shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 group overflow-hidden"
                     style={{
                       backgroundImage: `url('${project.image}')`,
                       backgroundPosition:
@@ -63,7 +63,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                         } rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300`}
                       ></div>
 
-                      <div className="relative max-h-20 overflow-hidden">
+                      <div className="relative max-h-20 sx:max-h-32 overflow-hidden">
                         <p
                           className={`text-white text-xl transition-transform ${
                             hoveredIndex === idx
@@ -76,12 +76,12 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                       </div>
 
                       <div className="flex flex-col align-bottom pt-3 opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
-                        <div className="flex flex-row space-x-4">
+                        <div className="grid grid-cols-7 gap-4 lg:flex lg:flex-row">
                           {project.icons.map((IconComponent, i) => (
                             <IconComponent
                               key={i}
                               size={30}
-                              className="text-white"
+                              className="text-white "
                             />
                           ))}
                         </div>

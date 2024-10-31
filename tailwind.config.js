@@ -45,7 +45,7 @@ export default {
       margin: {
         "-100%": "-100%",
       },
-      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
+      screens: { sx:"320px", sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
       animation: {
         fadeIn: "fadeIn 1.5s",
         bounce:
