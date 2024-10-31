@@ -43,11 +43,13 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                         project.name === "JerjeGym"
                           ? "1%"
                           : project.name === "ArbiTrack"
-                          ? "1% "
+                          ? "1%"
                           : "center",
                     }}
+                    onMouseEnter={() => handleMouseEnter(idx)}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent  to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300"></div>
 
                     <div className="relative bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300">
                       <h1 className="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
@@ -58,18 +60,14 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                           currentTheme === "dark"
                             ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500"
                             : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600"
-                        }rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300`}
+                        } rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300`}
                       ></div>
 
-                      <div
-                        className="relative max-h-20 overflow-hidden"
-                        onMouseEnter={() => handleMouseEnter(idx)}
-                        onMouseLeave={handleMouseLeave}
-                      >
+                      <div className="relative max-h-20 overflow-hidden">
                         <p
-                          className={`opacity-0 text-white text-xl group-hover:opacity-80 group-hover:translate-y-[-75%] transition-transform duration-[8000ms] delay-[1250ms] ease-linear ${
+                          className={`text-white text-xl transition-transform ${
                             hoveredIndex === idx
-                              ? "opacity-80 translate-y-[-75%]"
+                              ? "opacity-80 translate-y-[-75%] duration-[8000ms] delay-[1400ms] ease-linear"
                               : "opacity-0 translate-y-0"
                           }`}
                         >
