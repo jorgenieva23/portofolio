@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,tsx}"],
-  darkMode: "media",
+  darkMode: 'class',
   theme: {
     extend: {
       maxHeight: {
@@ -73,6 +73,12 @@ export default {
           from: { transform: "translateY(10px)" },
           to: { transform: "translateY(0)" },
         },
+      },
+      transitionProperty: {
+        'theme': 'background-color, border-color, color, fill, stroke',
+      },
+      transitionDuration: {
+        'theme': '300ms',
       },
     },
   },

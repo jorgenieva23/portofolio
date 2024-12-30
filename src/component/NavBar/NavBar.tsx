@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/useTheme"
 
 interface NavItem {
   label: string;
@@ -25,16 +25,16 @@ const NAV_ITEMS: Array<NavItem> = [
 ];
 
 export const NavBar: React.FC = (): JSX.Element => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme;
 
   return (
     <header
-      className={`w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow ${
+      className={`w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow transition-theme duration-theme ${
         currentTheme === "dark"
-          ? "bg-zinc-900 border-b border-zinc-600"
+          ? "bg-zinc-800 border-b border-zinc-600"
           : "bg-white"
       }`}
     >

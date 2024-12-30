@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SlideUp from "../SlideUp/SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/useTheme"
 import { projects } from "./projects";
 
 const ProjectsSection: React.FC = (): JSX.Element => {

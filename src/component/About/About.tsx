@@ -1,6 +1,6 @@
 import React from "react";
 import DownloadCV from "../DownloadCV/DownloadCV";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/useTheme"
 import { techImages } from "./techImages";
 
 const About: React.FC = (): JSX.Element => {
@@ -8,7 +8,7 @@ const About: React.FC = (): JSX.Element => {
   const currentTheme = theme === "system" ? "light" : theme;
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
+      <div className="my-12 pb-12 md:pt-10 md:pb-48">
         <h1 className="text-center font-bold text-4xl">
           About Me
           <hr
