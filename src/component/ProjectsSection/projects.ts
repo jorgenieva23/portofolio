@@ -4,12 +4,15 @@ import project3 from "../../assets/project3.png";
 import project4 from "../../assets/project4.png";
 import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
+import project7 from "../../assets/project7.png";
 
 import {
   SiTypescript,
   SiJavascript,
   SiReact,
   SiMongodb,
+  SiPostgresql,
+  SiSequelize,
   SiJsonwebtokens,
   SiExpress,
   SiRedux,
@@ -26,6 +29,20 @@ import {
 import { LiaNode } from "react-icons/lia";
 
 export const projects = [
+  {
+    name: "Abi Rached Studios",
+    description:
+      "(En Desarrollo) Abi Rached Studios es una plataforma de gestión para un juego en línea que permite manejar tanto las cuentas de usuarios como los personajes asociados. Como desarrollador backend, aseguré que el código fuera escalable mediante la arquitectura MVC, diseñé e implementé un sistema de autenticación robusto, recuperación de contraseñas y protección contra ataques. Integré un sistema de notificaciones por correo electrónico y un enfoque de soft delete para mantener la integridad de los datos.",
+    image: project7,
+    icons: [
+      SiTypescript,
+      LiaNode,
+      SiPostgresql,
+      SiSequelize,
+      SiJsonwebtokens,
+      SiExpress,
+    ],
+  },
   {
     name: "JerjeGym",
     description:
