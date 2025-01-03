@@ -2,7 +2,7 @@ import React from "react";
 import image from "../../assets/Jorge2.jpeg";
 import { Link } from "react-scroll";
 import { HiArrowDown } from "react-icons/hi";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/useTheme"
 
 export const HeroSection: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
@@ -11,7 +11,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
   const borderColor = currentTheme === "light" ? "rgb(59 130 246)" : "#ed8936";
 
   return (
-    <section id="home" style={{ ["--border-color" as any]: borderColor }}>
+    <section id="home" style={{ ["--border-color" as `--${string}`]: borderColor }}>
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-7 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className=" animacion rounded-full md:mt-2">
           <img
@@ -31,7 +31,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
                   : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent"
               }`}
             >
-              Hola!, soy Jorge
+              ¡Hola! Soy Jorge,
             </span>
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
@@ -44,7 +44,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             >
               Desarrollador Full Stack{" "}
             </span>
-            con orientación hacia el frontend, desde Tucuman, Argentina
+            con especialización en frontend, desde Tucuman, Argentina.
           </p>
           <Link
             to="projects"
@@ -59,7 +59,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             offset={-100}
             duration={500}
           >
-            Mis projectos
+            Mis proyectos
           </Link>
         </div>
       </div>
