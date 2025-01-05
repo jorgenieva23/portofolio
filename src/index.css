@@ -44,3 +44,23 @@
 }
 @media (prefees-color-shema: dark) {
 }
+
+:root {
+  /* Variables para el tema claro */
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+[class="dark"] {
+  /* Variables para el tema oscuro */
+  --background-color: #18181b;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+

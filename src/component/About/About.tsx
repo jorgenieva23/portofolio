@@ -1,19 +1,25 @@
 import React from "react";
 import DownloadCV from "../DownloadCV/DownloadCV";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/ThemeContext";
 import { techImages } from "./techImages";
+
+const INVERT_IMAGES = ['Express.svg', 'GitHub.svg', 'Astro.svg', 'Next.js.svg'];
 
 const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
-  const currentTheme = theme === "system" ? "light" : theme;
+
+  const shouldInvert = (imgSrc: string) => {
+    return INVERT_IMAGES.some(name => imgSrc.includes(name));
+  };
+
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
+      <div className="my-12 pb-12 md:pb-48">
         <h1 className="text-center font-bold text-4xl">
           About Me
           <hr
             className={`w-6 h-1 mx-auto my-4 border-0 rounded ${
-              currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"
+              theme === "dark" ? "bg-orange-500" : "bg-blue-500"
             }`}
           />
         </h1>
@@ -28,7 +34,7 @@ const About: React.FC = (): JSX.Element => {
               ¿Tienes desafíos de desarrollo web que requieren{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -42,7 +48,7 @@ const About: React.FC = (): JSX.Element => {
               Soy{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -52,7 +58,7 @@ const About: React.FC = (): JSX.Element => {
               , un{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -67,7 +73,7 @@ const About: React.FC = (): JSX.Element => {
               Me especializo en garantizar que tu sitio web{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -82,7 +88,7 @@ const About: React.FC = (): JSX.Element => {
               Mi compromiso es{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -92,7 +98,7 @@ const About: React.FC = (): JSX.Element => {
               . Con mis conocimientos,{" "}
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -106,7 +112,7 @@ const About: React.FC = (): JSX.Element => {
               Si necesitas un desarrollador comprometido con tu proyecto,
               <span
                 className={`font-bold ${
-                  currentTheme === "dark"
+                  theme === "dark"
                     ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
                     : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
                 }`}
@@ -123,11 +129,13 @@ const About: React.FC = (): JSX.Element => {
                   key={index}
                   src={imgSrc}
                   alt={`Tech Icon ${index + 1}`}
-                  className="w-16 h-16 m-2"
+                  className={`w-16 h-16 m-2 ${
+                    theme === "dark" && shouldInvert(imgSrc) ? "filter invert" : ""
+                  }`}
                 />
               ))}
             </div>
-            <div>
+            <div className="mt-6">
               <DownloadCV />
             </div>
           </div>

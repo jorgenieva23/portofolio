@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import SlideUp from "../SlideUp/SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/ThemeContext";
 import { projects } from "./projects";
 
 const ProjectsSection: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
-  const currentTheme = theme === "system" ? "light" : theme;
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -24,7 +23,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
         Proyectos
         <hr
           className={`w-6 mt-2 h-1 mx-auto my-4 border-0 rounded ${
-            currentTheme === "dark" ? "bg-orange-500" : "bg-blue-500"
+            theme === "dark" ? "bg-orange-500" : "bg-blue-500"
           }`}
         ></hr>
       </h1>
@@ -57,7 +56,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                       </h1>
                       <div
                         className={`w-16 h-2 ${
-                          currentTheme === "dark"
+                          theme === "dark"
                             ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500"
                             : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600"
                         } rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300`}
@@ -67,7 +66,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                         <p
                           className={`text-white text-xl transition-transform ${
                             hoveredIndex === idx
-                              ? "opacity-80 translate-y-[-75%] duration-[8000ms] delay-[1400ms] ease-linear"
+                              ? "opacity-80 translate-y-[-75%] duration-[8500ms] delay-[2000ms] ease-linear"
                               : "opacity-0 translate-y-0"
                           }`}
                         >
@@ -81,7 +80,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                             <IconComponent
                               key={i}
                               size={30}
-                              className="text-white "
+                              className="text-white"
                             />
                           ))}
                         </div>

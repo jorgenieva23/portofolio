@@ -2,17 +2,16 @@ import React from "react";
 import image from "../../assets/Jorge2.jpeg";
 import { Link } from "react-scroll";
 import { HiArrowDown } from "react-icons/hi";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/ThemeContext";
 
 export const HeroSection: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
-  const currentTheme = theme === "system" ? "light" : theme;
 
-  const borderColor = currentTheme === "light" ? "rgb(59 130 246)" : "#ed8936";
+  const borderColor = theme === "light" ? "rgb(59 130 246)" : "#ed8936";
 
   return (
     <section id="home" style={{ ["--border-color" as any]: borderColor }}>
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-7 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
+      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-4 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className=" animacion rounded-full md:mt-2">
           <img
             src={image}
@@ -26,7 +25,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
           <h1 className="text-4xl font-bold md:mt-0 md:text-7xl">
             <span
               className={`${
-                currentTheme === "dark"
+                theme === "dark"
                   ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 via-70% to-amber-500 bg-clip-text text-transparent"
                   : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent"
               }`}
@@ -37,7 +36,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             <span
               className={`${
-                currentTheme === "dark"
+                theme === "dark"
                   ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 via-70% to-amber-500 bg-clip-text text-transparent"
                   : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent"
               }`}
@@ -49,7 +48,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
           <Link
             to="projects"
             className={`text-neutral-100 font-semibold px-6 py-3 rounded shadow cursor-pointer ${
-              currentTheme === "dark"
+              theme === "dark"
                 ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500"
                 : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600"
             }`}

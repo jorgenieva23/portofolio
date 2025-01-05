@@ -4,6 +4,7 @@ import project3 from "../../assets/project3.png";
 import project4 from "../../assets/project4.png";
 import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
+import project7 from "../../assets/project7.png";
 
 import {
   SiTypescript,
@@ -11,6 +12,8 @@ import {
   SiReact,
   SiMongodb,
   SiJsonwebtokens,
+  SiSequelize,
+  SiPostgresql,
   SiExpress,
   SiRedux,
   SiTailwindcss,
@@ -26,6 +29,20 @@ import {
 import { LiaNode } from "react-icons/lia";
 
 export const projects = [
+  {
+    name: "Abi-Rached-Studios",
+    description:
+      "(En Desarrollo) Plataforma de gestión para un juego en línea que permite manejar tanto las cuentas de usuarios como los personajes asociados. Como desarrollador backend implemente una arquitectura MVC para que fuese escalable, un sistema de autenticación con JWT, recuperación de contraseñas y protección. Integré un sistema de notificaciones por correo electrónico y un enfoque de soft delete para mantener la integridad de los datos.",
+    image: project7,
+    icons: [
+      LiaNode,
+      SiExpress,
+      SiSequelize,
+      SiPostgresql,
+      SiTypescript,
+      SiJsonwebtokens,
+    ],
+  },
   {
     name: "JerjeGym",
     description:
@@ -48,7 +65,7 @@ export const projects = [
   {
     name: "ArbiTrack",
     description:
-      "Colaboración clave en el desarrollo de la plataforma ArbiTrack en una startup emergente, enfocada en ofrecer servicios a arbitradores de criptomonedas. Durante los 6 meses de trabajo, fui responsable de implementar la lógica central de la aplicación, asegurar la coherencia visual y la usabilidad, así como gestionar bases de datos y desarrollar funcionalidades contables, contribuyendo de manera significativa al éxito de un proyecto real en el mercado de criptomonedas",
+      "ArbiTrack en una startup emergente, enfocada en ofrecer servicios a arbitradores de criptomonedas. Durante los 6 meses de trabajo, fui responsable de implementar la lógica central de la aplicación, asegurar la coherencia visual y la usabilidad, así como gestionar bases de datos y desarrollar funcionalidades contables, contribuyendo de manera significativa al éxito de un proyecto real en el mercado de criptomonedas",
     image: project2,
     github: "https://github.com/geromedina/arbitrack",
     link: "https://www.arbitrack.com.ar/",

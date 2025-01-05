@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { useTheme } from "next-themes";
+import { useTheme } from "../../context/ThemeContext";
 
 interface NavItem {
   label: string;
@@ -25,27 +25,25 @@ const NAV_ITEMS: Array<NavItem> = [
 ];
 
 export const NavBar: React.FC = (): JSX.Element => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
-
-  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <header
       className={`w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow ${
-        currentTheme === "dark"
+        theme === "dark"
           ? "bg-zinc-900 border-b border-zinc-600"
           : "bg-white"
       }`}
     >
       <div className="justify-between md:items-center md:flex">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className="flex items-center justify-between py-3 md:py-5 md:center">
             <Link to="home">
               <div className="container flex items-center space-x-2">
                 <h2
                   className={`text-2xl font-bold cursor-pointer ${
-                    currentTheme === "dark" ? "text-white" : "text-black"
+                    theme === "dark" ? "text-white" : "text-black"
                   }`}
                 >
                   Jorge Nieva
@@ -76,7 +74,7 @@ export const NavBar: React.FC = (): JSX.Element => {
                     key={idx}
                     to={item.page}
                     className={`block lg:inline-block ${
-                      currentTheme === "dark"
+                      theme === "dark"
                         ? "text-neutral-100"
                         : "text-zinc-900"
                     } hover:text-neutral-500`}
@@ -91,16 +89,16 @@ export const NavBar: React.FC = (): JSX.Element => {
                   </Link>
                 );
               })}
-              {currentTheme === "dark" ? (
+              {theme === "dark" ? (
                 <button
-                  onClick={() => setTheme("light")}
+                  onClick={toggleTheme}
                   className="h-5 w-5 text-orange-300"
                 >
                   <RiSunLine size={25} color="light" />
                 </button>
               ) : (
                 <button
-                  onClick={() => setTheme("dark")}
+                  onClick={toggleTheme}
                   className="h-5 w-5 text-zinc-900"
                 >
                   <RiMoonFill size={25} />
