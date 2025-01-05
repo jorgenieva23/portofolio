@@ -35,7 +35,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 w-full">
                   <article
-                    className="relative mx-auto w-full max-w-lg shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 group overflow-hidden"
+                    className="relative rounded-lg mx-auto w-full max-w-lg shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 group overflow-hidden"
                     style={{
                       backgroundImage: `url('${project.image}')`,
                       backgroundPosition:
@@ -66,7 +66,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                         <p
                           className={`text-white text-xl transition-transform ${
                             hoveredIndex === idx
-                              ? "opacity-80 translate-y-[-75%] duration-[8500ms] delay-[2000ms] ease-linear"
+                              ? "opacity-80 translate-y-[-75%] duration-[9500ms] delay-[3000ms] ease-linear"
                               : "opacity-0 translate-y-0"
                           }`}
                         >
@@ -85,26 +85,30 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                           ))}
                         </div>
                         <div className="flex pt-2 space-x-4">
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <BsGithub
-                              size={30}
-                              className="hover:-translate-y-1 transition-transform cursor-pointer"
-                            />
-                          </a>
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <BsArrowUpRightSquare
-                              size={30}
-                              className="hover:-translate-y-1 transition-transform cursor-pointer"
-                            />
-                          </a>
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <BsGithub
+                                size={30}
+                                className="hover:-translate-y-1 transition-transform cursor-pointer"
+                              />
+                            </a>
+                          )}
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <BsArrowUpRightSquare
+                                size={30}
+                                className="hover:-translate-y-1 transition-transform cursor-pointer"
+                              />
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>

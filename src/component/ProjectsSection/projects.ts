@@ -5,6 +5,7 @@ import project4 from "../../assets/project4.png";
 import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
 import project7 from "../../assets/project7.png";
+import project8 from "../../assets/project8.png";
 
 import {
   SiTypescript,
@@ -25,10 +26,28 @@ import {
   SiAuth0,
   SiNextdotjs,
   SiVite,
+  SiDocker,
+  SiPython,
 } from "react-icons/si";
 import { LiaNode } from "react-icons/lia";
 
 export const projects = [
+  {
+    name: "SmartRocks",
+    description: "Participé en el mantenimiento e implementación de lógica en la plataforma SmartRocks, una herramienta especializada en el procesamiento y análisis digital de rocas en 2D y 3D. Realicé mejoras en funcionalidades existentes y aseguré la optimización de procesos clave, contribuyendo al desarrollo de soluciones utilizadas por profesionales en geología y exploración de recursos naturales.",
+    image: project8,
+    link: "https://smartrocks.com/",
+    icons: [
+      SiJavascript,
+      SiPython,
+      SiReact,
+      SiMongodb,
+      SiExpress,
+      SiCss3,
+      SiRedux,
+      SiDocker,
+    ],
+  },
   {
     name: "Abi-Rached-Studios",
     description:
