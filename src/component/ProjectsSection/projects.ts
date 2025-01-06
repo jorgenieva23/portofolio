@@ -67,7 +67,6 @@ export const projects = [
     description:
       "JerjeGym es un sistema para la gestión y control de Gimnasios. El mismo cuenta con autenticación de usuarios mediante email y password junto a roles y permisos. ABM de socios, promociones, cuotas, ingresos. Dashboard con estadísticas vitales para el control de sus respectivas funciones. Balance de ingresos diarios mediante gráficos. Control de movimientos realizados por los usuarios.",
     image: project3,
-    github: "https://github.com/jorgenieva23/Sist.Gym",
     link: "https://sist-gym.vercel.app/",
     icons: [
       SiTypescript,
