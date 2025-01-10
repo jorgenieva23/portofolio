@@ -130,7 +130,7 @@ const About: React.FC = (): JSX.Element => {
                   src={imgSrc}
                   alt={`Tech Icon ${index + 1}`}
                   className={`w-16 h-16 m-2 ${
-                    theme === "dark" && shouldInvert(imgSrc) ? "dark:brightness-0 dark:invert" : ""
+                    shouldInvert(imgSrc) ? "tech-icon-invertible" : ""
                   }`}
                 />
               ))}

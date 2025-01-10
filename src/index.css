@@ -57,6 +57,14 @@
   --text-color: #ffffff;
 }
 
+[class="dark"] .tech-icon-invertible {
+  filter: invert(1) brightness(100%);
+}
+
+.tech-icon {
+  transition: filter 0.3s ease;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
