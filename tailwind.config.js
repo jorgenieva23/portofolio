@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,tsx}"],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       maxHeight: {
@@ -45,7 +45,13 @@ export default {
       margin: {
         "-100%": "-100%",
       },
-      screens: { sx:"320px", sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
+      screens: {
+        sx: "320px",
+        sm: "480px",
+        md: "768px",
+        lg: "976px",
+        xl: "1440pd",
+      },
       animation: {
         fadeIn: "fadeIn 1.5s",
         bounce:
@@ -75,12 +81,17 @@ export default {
         },
       },
       transitionProperty: {
-        'theme': 'background-color, border-color, color, fill, stroke',
+        theme: "background-color, border-color, color, fill, stroke",
       },
       transitionDuration: {
-        'theme': '300ms',
+        theme: "300ms",
       },
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      filter: ["dark"],
+    },
+  },
 };
