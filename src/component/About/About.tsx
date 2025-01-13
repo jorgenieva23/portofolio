@@ -9,7 +9,6 @@ const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
 
   const shouldInvert = (imgSrc: string) => {
-    console.log(imgSrc, shouldInvert(imgSrc));
     return INVERT_IMAGES.some(name => imgSrc.includes(name));
   };
 
