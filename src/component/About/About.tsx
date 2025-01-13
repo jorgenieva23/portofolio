@@ -9,6 +9,7 @@ const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
 
   const shouldInvert = (imgSrc: string) => {
+    console.log(imgSrc, shouldInvert(imgSrc));
     return INVERT_IMAGES.some(name => imgSrc.includes(name));
   };
 
@@ -129,9 +130,10 @@ const About: React.FC = (): JSX.Element => {
                   key={index}
                   src={imgSrc}
                   alt={`Tech Icon ${index + 1}`}
-                  className={`w-16 h-16 m-2 ${
-                    shouldInvert(imgSrc) ? "tech-icon-invertible" : ""
-                  }`}
+                  className="w-16 h-16 m-2"
+                  style={{
+                    filter: shouldInvert(imgSrc) ? 'invert(1)' : 'none',
+                  }}
                 />
               ))}
             </div>
