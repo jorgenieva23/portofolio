@@ -6,7 +6,7 @@ import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
 import project7 from "../../assets/project7.png";
 import project8 from "../../assets/project8.png";
-import project9 from "../../assets/project9.png";
+import Max from "../../assets/project9.png"
 
 import {
   SiTypescript,
@@ -38,7 +38,7 @@ export const projects = [
     name: "MaxPowerTech",
     description:
       "Sitio web institucional para un negocio dedicado a la reparación de celulares y venta de insumos. Desarrollado con foco en claridad, confianza y presencia online profesional.",
-    image: project9,
+    image: Max,
     link: "https://www.maxpowertech.com.ar/",
     icons: [SiHtml5, SiCss3, SiJavascript, SiAstro, SiTailwindcss, SiVercel],
   },
