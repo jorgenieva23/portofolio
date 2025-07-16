@@ -50,7 +50,7 @@ const ProjectsSection: React.FC = (): JSX.Element => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300"></div>
 
-                    <div className="relative bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300">
+                    <div className="relative bg-black bg-opacity-20 min-h-150 px-10 flex flex-col justify-end hover:bg-opacity-75 transform duration-300">
                       <h1 className="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
                         {project.name}
                       </h1>

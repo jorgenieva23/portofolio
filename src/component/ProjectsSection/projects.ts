@@ -6,6 +6,7 @@ import project5 from "../../assets/project5.png";
 import project6 from "../../assets/project6.png";
 import project7 from "../../assets/project7.png";
 import project8 from "../../assets/project8.png";
+import project9 from "../../assets/project9.png";
 
 import {
   SiTypescript,
@@ -28,13 +29,23 @@ import {
   SiVite,
   SiDocker,
   SiPython,
+  SiVercel,
 } from "react-icons/si";
 import { LiaNode } from "react-icons/lia";
 
 export const projects = [
   {
+    name: "MaxPowerTech",
+    description:
+      "Sitio web institucional para un negocio dedicado a la reparación de celulares y venta de insumos. Desarrollado con foco en claridad, confianza y presencia online profesional.",
+    image: project9,
+    link: "https://www.maxpowertech.com.ar/",
+    icons: [SiHtml5, SiCss3, SiJavascript, SiAstro, SiTailwindcss, SiVercel],
+  },
+  {
     name: "SmartRocks",
-    description: "Participé en el mantenimiento e implementación de lógica en la plataforma SmartRocks, una herramienta especializada en el procesamiento y análisis digital de rocas en 2D y 3D. Realicé mejoras en funcionalidades existentes y aseguré la optimización de procesos clave, contribuyendo al desarrollo de soluciones utilizadas por profesionales en geología y exploración de recursos naturales.",
+    description:
+      "Participé en el mantenimiento e implementación de lógica en la plataforma SmartRocks, una herramienta especializada en el procesamiento y análisis digital de rocas en 2D y 3D. Realicé mejoras en funcionalidades existentes y aseguré la optimización de procesos clave, contribuyendo al desarrollo de soluciones utilizadas por profesionales en geología y exploración de recursos naturales.",
     image: project8,
     link: "https://smartrocks.com/",
     icons: [
@@ -134,7 +145,7 @@ export const projects = [
     image: project5,
     github: "https://github.com/jorgenieva23/SpacexClon",
     link: "https://spacex-clon.vercel.app/",
-    icons: [SiJavascript, SiHtml5, SiCss3, SiAstro],
+    icons: [SiJavascript, SiHtml5, SiTailwindcss, SiAstro],
   },
   {
     name: "Tesla Clone",
