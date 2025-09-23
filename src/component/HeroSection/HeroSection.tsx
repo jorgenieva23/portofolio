@@ -49,8 +49,8 @@ export const HeroSection: React.FC = (): JSX.Element => {
             to="projects"
             className={`text-neutral-100 font-semibold px-6 py-3 rounded shadow cursor-pointer ${
               theme === "dark"
-                ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500"
-                : "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600"
+                ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500 hover:from-yellow-600 hover:via-orange-600 hover:to-amber-600"
+                : "bg-gradient-to-r hover:from-sky-400 hover:via-blue-500 hover:to-indigo-600"
             }`}
             activeClass="active"
             spy={true}

@@ -3,13 +3,13 @@ import DownloadCV from "../DownloadCV/DownloadCV";
 import { useTheme } from "../../context/ThemeContext";
 import { techImages } from "./techImages";
 
-const INVERT_IMAGES = ['Express.svg', 'GitHub.svg', 'Astro.svg', 'Next.js.svg'];
+const INVERT_IMAGES = ["Express.svg", "GitHub.svg", "Astro.svg", "Next.js.svg"];
 
 const About: React.FC = (): JSX.Element => {
   const { theme } = useTheme();
 
   const shouldInvert = (imgSrc: string) => {
-    return INVERT_IMAGES.some(name => imgSrc.includes(name));
+    return INVERT_IMAGES.some((name) => imgSrc.includes(name));
   };
 
   return (
@@ -34,9 +34,7 @@ const About: React.FC = (): JSX.Element => {
               ¿Tienes desafíos de desarrollo web que requieren{" "}
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 soluciones rápidas y efectivas
@@ -48,9 +46,7 @@ const About: React.FC = (): JSX.Element => {
               Soy{" "}
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 Jorge Nieva
@@ -58,9 +54,7 @@ const About: React.FC = (): JSX.Element => {
               , un{" "}
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 desarrollador web Full Stack
@@ -88,9 +82,7 @@ const About: React.FC = (): JSX.Element => {
               Mi compromiso es{" "}
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 ayudarte a alcanzar tus objetivos
@@ -98,9 +90,7 @@ const About: React.FC = (): JSX.Element => {
               . Con mis conocimientos,{" "}
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 garantizo soluciones efectivas y a medida{" "}
@@ -112,9 +102,7 @@ const About: React.FC = (): JSX.Element => {
               Si necesitas un desarrollador comprometido con tu proyecto,
               <span
                 className={`font-bold ${
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent"
-                    : "bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+                  theme === "dark" ? "text-orange" : "text-blue"
                 }`}
               >
                 ¡será un placer colaborar contigo!

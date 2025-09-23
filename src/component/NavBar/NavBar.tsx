@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
+
 import { useTheme } from "../../context/ThemeContext";
+import { Logo } from "../Logo";
 
 interface NavItem {
   label: string;
@@ -31,23 +33,19 @@ export const NavBar: React.FC = (): JSX.Element => {
   return (
     <header
       className={`w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow ${
-        theme === "dark"
-          ? "bg-zinc-900 border-b border-zinc-600"
-          : "bg-white"
+        theme === "dark" ? "bg-zinc-900 border-b border-zinc-600" : "bg-white"
       }`}
     >
       <div className="justify-between md:items-center md:flex">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:center">
+          <div className="flex items-center justify-between py-3 md:py-3 md:center">
             <Link to="home">
               <div className="container flex items-center space-x-2">
-                <h2
-                  className={`text-2xl font-bold cursor-pointer ${
-                    theme === "dark" ? "text-white" : "text-black"
-                  }`}
-                >
-                  Jorge Nieva
-                </h2>
+                <Logo
+                  className={`icon-3d w-10 h-10 ${
+                    theme === "dark" ? "text-neutral-100" : "text-zinc-900"
+                  } `}
+                />
               </div>
             </Link>
             <div className="md:hidden">
@@ -74,9 +72,7 @@ export const NavBar: React.FC = (): JSX.Element => {
                     key={idx}
                     to={item.page}
                     className={`block lg:inline-block ${
-                      theme === "dark"
-                        ? "text-neutral-100"
-                        : "text-zinc-900"
+                      theme === "dark" ? "text-neutral-100" : "text-zinc-900"
                     } hover:text-neutral-500`}
                     activeClass="active"
                     spy={true}
@@ -97,10 +93,7 @@ export const NavBar: React.FC = (): JSX.Element => {
                   <RiSunLine size={25} color="light" />
                 </button>
               ) : (
-                <button
-                  onClick={toggleTheme}
-                  className="h-5 w-5 text-zinc-900"
-                >
+                <button onClick={toggleTheme} className="h-5 w-5 text-zinc-900">
                   <RiMoonFill size={25} />
                 </button>
               )}

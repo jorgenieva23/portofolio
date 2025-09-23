@@ -13,6 +13,7 @@ import react from "../../assets/Tech/React.svg";
 import redux from "../../assets/Tech/Redux.svg";
 import firebase from "../../assets/Tech/Firebase.svg";
 import sass from "../../assets/Tech/Sass.svg";
+import bootstrap from "../../assets/Tech/Bootstrap.svg";
 import tailwind from "../../assets/Tech/Tailwind CSS.svg";
 import next from "../../assets/Tech/Next.js.svg";
 import vite from "../../assets/Tech/Vite.js.svg";
@@ -20,7 +21,7 @@ import astro from "../../assets/Tech/Astro.svg";
 import git from "../../assets/Tech/Git (1).svg";
 import github from "../../assets/Tech/GitHub.svg";
 
-export const techImages  = [
+export const techImages = [
   html,
   css,
   js,
@@ -28,6 +29,7 @@ export const techImages  = [
   react,
   redux,
   sass,
+  bootstrap,
   tailwind,
   next,
   vite,
