@@ -7,6 +7,7 @@ import project6 from "../../assets/project6.png";
 import project7 from "../../assets/project7.png";
 import project8 from "../../assets/project8.png";
 import project10 from "../../assets/project10.png";
+import project11 from "../../assets/project11.png";
 
 import {
   SiTypescript,
@@ -25,6 +26,7 @@ import {
   SiSass,
   SiFirebase,
   SiAuth0,
+  SiElectron,
   SiNextdotjs,
   SiVite,
   SiDocker,
@@ -34,6 +36,22 @@ import {
 import { LiaNode } from "react-icons/lia";
 
 export const projects = [
+  {
+    name: "LexisIA",
+    description:
+      "LexisIA es una aplicación de escritorio desarrollada con Electron y TypeScript que permite transcribir videos, audios o enlaces a texto utilizando Whisper, Torch y Demucs. Detecta automáticamente si el equipo cuenta con GPU para acelerar el proceso y genera los resultados en formato .docx. Funciona sin depender de servicios externos ni conexión constante a internet, y no posee límites en la duración o cantidad de archivos a procesar. Diseñada para estudiantes y profesionales que buscan optimizar su tiempo al trabajar con grabaciones o clases.",
+    image: project11,
+    link: "https://github.com/jorgenieva23/Transcription-AppDesktop/releases/download/v1.1/LexisIA-Setup-1.1.0.exe",
+    github: "https://github.com/jorgenieva23/Transcription-AppDesktop",
+    icons: [
+      SiElectron,
+      SiPython,
+      SiTypescript,
+      SiReact,
+      SiVite,
+      SiTailwindcss,
+    ],
+  },
   {
     name: "MaxPowerTech",
     description:
@@ -64,6 +82,7 @@ export const projects = [
     description:
       "(En Desarrollo) Plataforma de gestión para un juego en línea que permite manejar tanto las cuentas de usuarios como los personajes asociados. Como desarrollador backend implemente una arquitectura MVC para que fuese escalable, un sistema de autenticación con JWT, recuperación de contraseñas y protección. Integré un sistema de notificaciones por correo electrónico y un enfoque de soft delete para mantener la integridad de los datos.",
     image: project7,
+    github: "https://github.com/AbirachedStudios/Abi-Rached-Studios-Web",
     icons: [
       LiaNode,
       SiExpress,
@@ -78,6 +97,7 @@ export const projects = [
     description:
       "JerjeGym es un sistema para la gestión y control de Gimnasios. El mismo cuenta con autenticación de usuarios mediante email y password junto a roles y permisos. ABM de socios, promociones, cuotas, ingresos. Dashboard con estadísticas vitales para el control de sus respectivas funciones. Balance de ingresos diarios mediante gráficos. Control de movimientos realizados por los usuarios.",
     image: project3,
+    github: "https://github.com/jorgenieva23/Sist.Gym",
     link: "https://sist-gym.vercel.app/",
     icons: [
       SiTypescript,
@@ -96,7 +116,7 @@ export const projects = [
     description:
       "ArbiTrack en una startup emergente, enfocada en ofrecer servicios a arbitradores de criptomonedas. Durante los 6 meses de trabajo, fui responsable de implementar la lógica central de la aplicación, asegurar la coherencia visual y la usabilidad, así como gestionar bases de datos y desarrollar funcionalidades contables, contribuyendo de manera significativa al éxito de un proyecto real en el mercado de criptomonedas",
     image: project2,
-    github: "https://github.com/geromedina/arbitrack",
+    github: "https://github.com/arbitrack/arbitrack",
     link: "https://www.arbitrack.com.ar/",
     icons: [
       SiJavascript,

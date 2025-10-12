@@ -1,6 +1,7 @@
 import html from "../../assets/Tech/HTML5.svg";
 import js from "../../assets/Tech/JavaScript.svg";
 import ts from "../../assets/Tech/TypeScript.svg";
+import python from "../../assets/Tech/Python.svg";
 import css from "../../assets/Tech/CSS3.svg";
 import node from "../../assets/Tech/Node.js.svg";
 import express from "../../assets/Tech/Express.svg";
@@ -16,6 +17,7 @@ import sass from "../../assets/Tech/Sass.svg";
 import bootstrap from "../../assets/Tech/Bootstrap.svg";
 import tailwind from "../../assets/Tech/Tailwind CSS.svg";
 import next from "../../assets/Tech/Next.js.svg";
+import electron from "../../assets/Tech/Electron.svg";
 import vite from "../../assets/Tech/Vite.js.svg";
 import astro from "../../assets/Tech/Astro.svg";
 import git from "../../assets/Tech/Git (1).svg";
@@ -26,12 +28,14 @@ export const techImages = [
   css,
   js,
   ts,
+  python,
   react,
   redux,
   sass,
   bootstrap,
   tailwind,
   next,
+  electron,
   vite,
   astro,
   node,

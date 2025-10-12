@@ -1,7 +1,7 @@
 "use client"; // this is a client component
 import React from "react";
 import { HiArrowDown } from "react-icons/hi";
-import pdf from "../../assets/Nieva Jorge Dev.pdf";
+import pdf from "../../assets/Jorge Nieva.pdf";
 import { useTheme } from "../../context/ThemeContext";
 
 const DownloadCV: React.FC = (): JSX.Element => {
