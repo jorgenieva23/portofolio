@@ -10,7 +10,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
   const borderColor = theme === "light" ? "rgb(59 130 246)" : "#ed8936";
 
   return (
-    <section id="home" style={{ ["--border-color" as any]: borderColor }}>
+    <section id="home" style={{ ["--border-color" as keyof React.CSSProperties]: borderColor }}>
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-4 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className=" animacion rounded-full md:mt-2">
           <img
@@ -50,7 +50,7 @@ export const HeroSection: React.FC = (): JSX.Element => {
             className={`text-neutral-100 font-semibold px-6 py-3 rounded shadow cursor-pointer ${
               theme === "dark"
                 ? "bg-gradient-to-r from-yellow-500 from-10% via-orange-500 to-amber-500 hover:from-yellow-600 hover:via-orange-600 hover:to-amber-600"
-                : "bg-gradient-to-r hover:from-sky-400 hover:via-blue-500 hover:to-indigo-600"
+                : " bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 hover:from-sky-500 hover:via-blue-600 hover:to-indigo-700"
             }`}
             activeClass="active"
             spy={true}
